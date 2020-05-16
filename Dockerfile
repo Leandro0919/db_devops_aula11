@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
+RUN apt-get install -y python3-pip python-dev build-essential
 COPY . /
-WORKDIR/
+WORKDIR /
 RUN pip3 install --no-cache-dir -r requirements.txt
-CMD["python", "setup_database.py"]
+CMD ["python", "setup_database.py"]
